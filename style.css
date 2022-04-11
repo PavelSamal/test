@@ -1,0 +1,284 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  height: 100%;
+  background: linear-gradient(303.79deg, #F0C3FC -53.74%, #D7BEFC -4.64%, #BCB1FC 40.96%, #A1AEFC 83.05%, #94BDFC 127.47%, #8EC5FC 170.73%), linear-gradient(0deg, #84FAB0 0%, #85F9BC 21.87%, #88F8D7 42.19%, #8BF6F5 60.94%, #8EDDF5 80.73%, #8FD3F4 100%);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.todo {
+  width: 730px;
+  height: 719px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.todo__logo {
+  width: 177px;
+  height: 177px;
+}
+.todo__header {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 50px 0 0 0;
+}
+.todo__add-wrapper {
+  margin-top: 52px;
+}
+.todo__new-todo-input {
+  padding: 12px;
+  font-weight: 400;
+  font-size: 14px;
+  background: #FFFFFF;
+  border: 1px solid #C7CCD1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  height: 40px;
+  width: 317px;
+}
+.todo__submit-button {
+  font-weight: 600;
+  font-size: 13px;
+  width: 77px;
+  height: 40px;
+  background: #2578F4;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 16px;
+}
+.todo__table {
+  margin-top: 40px;
+  max-height: 92px;
+  overflow-y: scroll;
+}
+.todo__table::-webkit-scrollbar {
+  width: 4px;
+  height: 92px;
+}
+.todo__table::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  width: 4px;
+  height: 80px;
+  background-color: rgba(32, 36, 39, 0.1);
+}
+.todo__touch {
+  width: 11px;
+  height: 14px;
+  opacity: 0%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("images/touch.svg");
+  background-size: 10px 13px;
+  margin-right: 7px;
+  cursor: pointer;
+}
+.todo__exercises {
+  margin-top: 18px;
+  width: 448px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-weight: 400;
+  font-size: 14px;
+}
+.todo__exercises:hover .todo__touch {
+  -webkit-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+  opacity: 50%;
+}
+.todo__exercises:first-child {
+  margin: 0;
+}
+.todo__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.todo__checkbox + label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.todo__checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border: 1px solid #C7CCD1;
+  border-radius: 2px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.todo__checkbox:checked + label::before {
+  border-color: #2578F4;
+  background-color: #2578F4;
+  background-image: url("images/check_mark.svg");
+  background-size: 90%;
+}
+.todo__checkbox:checked + label + p {
+  opacity: 50%;
+}
+.todo__description {
+  width: 258px;
+  height: 16px;
+  margin: 2px 76px 2px 0;
+}
+.todo__edit-button {
+  cursor: pointer;
+  margin-right: 16px;
+}
+.todo__delete-button {
+  cursor: pointer;
+}
+.todo__info-wrapper {
+  margin-top: 32px;
+  width: 410px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.todo__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 190px;
+  height: 85px;
+  background: rgba(32, 36, 39, 0.05);
+  border-radius: 8px;
+}
+.todo__completed {
+  font-weight: 600;
+  font-size: 12px;
+  color: #202427;
+  opacity: 50%;
+  margin: 16px 0 0 16px;
+}
+.todo__result {
+  font-weight: 700;
+  font-size: 14px;
+  color: #202427;
+  margin: 4px 0 0 16px;
+}
+.todo__progress {
+  margin: 12px 0 0 16px;
+  width: 158px;
+  border-radius: 8px;
+  height: 4px;
+}
+.todo__progress::-webkit-progress-bar {
+  background-color: #E1E1E2;
+  border-radius: 8px;
+}
+.todo__progress::-webkit-progress-value {
+  border-radius: 8px;
+  background-color: #EF5DA8;
+}
+
+.filter {
+  width: 410px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-weight: 600;
+  font-size: 13px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.filter__select {
+  text-align: center;
+}
+.filter_margin-top {
+  margin-top: 32px;
+}
+.filter__select_сhecked > a {
+  border: none;
+  cursor: pointer;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #2578F4;
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=style.css.map */

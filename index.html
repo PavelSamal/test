@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <section class="todo">
+        <img src="images/logo.svg" class="todo__logo">
+        <h1 class="todo__header">Today I need to</h1>
+        <div class="todo__add-wrapper">
+            <input class="todo__new-todo-input" type="text" placeholder="Add todo">
+            <button class="todo__submit-button">Submit</button>
+        </div>
+        <div class="todo__table">
+            <div class="todo__exercises">
+                <div class="todo__touch"></div>
+                <input type="checkbox" class="todo__checkbox" id="todo">
+                <label for="todo"></label>
+                <p class="todo__description">do the exercises</p>
+                <img src="images/pencil.svg" alt="pencil" class="todo__edit-button">
+                <img src="images/bin.svg" alt="bin" class="todo__delete-button">
+            </div>
+            <div class="todo__exercises">
+                <div class="todo__touch"></div>
+                <input type="checkbox" class="todo__checkbox" id="todo1">
+                <label for="todo1"></label>
+                <p class="todo__description">do the exercises</p>
+                <img src="images/pencil.svg" alt="pencil" class="todo__edit-button">
+                <img src="images/bin.svg" alt="bin" class="todo__delete-button">
+            </div>
+            <div class="todo__exercises">
+                <div class="todo__touch"></div>
+                <input type="checkbox" class="todo__checkbox" id="todo2">
+                <label for="todo2"></label>
+                <p class="todo__description">do the exercises</p>
+                <img src="images/pencil.svg" alt="pencil" class="todo__edit-button">
+                <img src="images/bin.svg" alt="bin" class="todo__delete-button">
+            </div>
+            <div class="todo__exercises">
+                <div class="todo__touch"></div>
+                <input type="checkbox" class="todo__checkbox" id="todo3">
+                <label for="todo3"></label>
+                <p class="todo__description">do the exercises</p>
+                <img src="images/pencil.svg" alt="pencil" class="todo__edit-button">
+                <img src="images/bin.svg" alt="bin" class="todo__delete-button">
+            </div>
+            <div class="todo__exercises">
+                <div class="todo__touch"></div>
+                <input type="checkbox" class="todo__checkbox" id="todo4">
+                <label for="todo4"></label>
+                <p class="todo__description">do the exercises</p>
+                <img src="images/pencil.svg" alt="pencil" class="todo__edit-button">
+                <img src="images/bin.svg" alt="bin" class="todo__delete-button">
+            </div>
+        </div>
+        <div class="todo__info-wrapper">
+            <div class="todo__info">
+                <p class="todo__completed">3  tasks</p>
+                <h2 class="todo__result">Completed</h2>
+                <progress value="0" max="3" class="todo__progress"></progress>
+            </div>
+            <div class="todo__info">
+                <p class="todo__completed">0  tasks</p>
+                <h2 class="todo__result">To be finished</h2>
+                <progress value="3" max="3" class="todo__progress"></progress>
+            </div>
+        </div>
+        <div class="filter filter_margin-top">
+            <div class="filter__select">
+                <a>Check all</a>
+            </div>
+            <div class="filter__select filter__select_сhecked">
+               <a>All</a>
+            </div>
+            <div class="filter__select">
+                <a>Clear complited</a>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
